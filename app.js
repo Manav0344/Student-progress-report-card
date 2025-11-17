@@ -8,7 +8,7 @@ document.getElementById("generateBtn").addEventListener("click", function () {
    
     document.querySelector(".card-container").style.display = "block";
 
-   
+   d
     document.getElementById("cardName").textContent =
         document.getElementById("name").value;
 
