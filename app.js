@@ -2,7 +2,42 @@ document.getElementById("marks").oninput = function () {
     document.getElementById("marksValue").textContent = this.value;
 };
 
+
+document.getElementById("generateBtn").addEventListener("click", function () {
+
+   
+    document.querySelector(".card-container").style.display = "block";
+
+   
+    document.getElementById("cardName").textContent =
+        document.getElementById("name").value;
+
+    document.getElementById("cardRoll").textContent =
+        document.getElementById("roll").value;
+
+    document.getElementById("cardEmail").textContent =
+        document.getElementById("email").value;
+
+    document.getElementById("cardMarks").textContent =
+        document.getElementById("marks").value;
+
+    // Photo
+    const imgFile = document.getElementById("photo").files[0];
+    const img = document.getElementById("student-photo");
+
+    if (imgFile) {
+        img.src = URL.createObjectURL(imgFile);
+    }
+});
+
+
+
+
+
+
 document.getElementById("generateBtn").onclick = function () {
+
+    
 
     let name = document.getElementById("name").value;
     document.getElementById("cardname").textContent = "Student Name: " + name;
